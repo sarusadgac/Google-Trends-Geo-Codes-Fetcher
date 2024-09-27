@@ -24,7 +24,7 @@ jobs:
         run: pip install requests
 
       - name: Run Script
-        run: python geo_code_fetcher.py
+        run: python main.py
 
       - name: Commit and Push Changes
         run: |
