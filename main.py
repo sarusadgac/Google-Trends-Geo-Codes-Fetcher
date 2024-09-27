@@ -2,6 +2,7 @@ import requests
 import re
 import pycountry
 import os
+from datetime import datetime
 
 # Function to get geo location from the atom feed link
 def get_geo_from_pn(pn):
@@ -27,16 +28,25 @@ def get_country_name(geo):
         return 'Unknown Country'
     return 'Unknown Country'
 
-# Ensure README.md exists or create it
-if not os.path.exists('README.md'):
-    with open('README.md', 'w') as readme:
-        readme.write('')  # Create the file if it doesn't exist
+# Get current time for the last update timestamp
+current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+
+# Starting content for the README file
+readme_content = f"""
+## Google Trends Geo Code Fetcher
+
+Using Google Trends data, this tool automatically collects and updates the pn codes and their respective country names.
+
+**Last Update:** {current_time}
+
+| pn code | Country |
+|---------|---------|
+"""
 
 # Write results to a file and append to README.md
-with open('found_geo_codes.txt', 'w') as f, open('README.md', 'a') as readme:
-    # Write table header in README.md
-    readme.write('| pn code | country |\n')
-    readme.write('|---------|---------|\n')
+with open('found_geo_codes.txt', 'w') as f, open('README.md', 'w') as readme:
+    # Initialize README content
+    readme.write(readme_content)
     
     for i in range(101):  # Iterate through first 101 entries
         pn = f'p{i}'
