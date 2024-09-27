@@ -1,6 +1,7 @@
 import requests
 import re
 import pycountry
+import os
 
 # Function to get geo location from the atom feed link
 def get_geo_from_pn(pn):
@@ -26,13 +27,18 @@ def get_country_name(geo):
         return 'Unknown Country'
     return 'Unknown Country'
 
+# Ensure README.md exists or create it
+if not os.path.exists('README.md'):
+    with open('README.md', 'w') as readme:
+        readme.write('')  # Create the file if it doesn't exist
+
 # Write results to a file and append to README.md
 with open('found_geo_codes.txt', 'w') as f, open('README.md', 'a') as readme:
     # Write table header in README.md
     readme.write('| pn code | country |\n')
     readme.write('|---------|---------|\n')
     
-    for i in range(101):
+    for i in range(101):  # Iterate through first 101 entries
         pn = f'p{i}'
         pn, geo = get_geo_from_pn(pn)
         if geo != '' and geo != 'Error':
