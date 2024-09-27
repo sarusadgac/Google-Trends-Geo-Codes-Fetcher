@@ -1,21 +1,21 @@
 import requests 
 import re
 
-# Geo konum bilgisini atom feed linkinden alan fonksiyon
+# Function to get geo location from the atom feed link
 def get_geo_from_pn(pn):
     url = f'https://trends.google.com/trends/hottrends/atom/feed?pn={pn}'
     response = requests.get(url)
     if response.status_code == 200:
-        # Atom linkinden geo bilgisini çıkarma
+        # Extract geo information from the atom feed
         match = re.search(r'geo=([A-Z]{2})', response.text)
         if match:
-            return pn, match.group(1)  # US, IN gibi geo kodlarını döndürür
+            return pn, match.group(1)  # Returns geo codes like US, IN
         else:
-            return pn, ''  # Geo bilgisi yoksa boş bırak
+            return pn, ''  # Leave empty if no geo info
     else:
-        return pn, 'Error'  # Trend verisi yoksa 'Error' olarak işaretle
+        return pn, 'Error'  # Mark as 'Error' if no trend data
 
-# Sonuçları dosyaya yazdırma
+# Write results to a file
 with open('found_geo_codes.txt', 'w') as f:
     for i in range(1001):
         pn = f'p{i}'
