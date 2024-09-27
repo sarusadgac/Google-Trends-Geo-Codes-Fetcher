@@ -1,5 +1,6 @@
-import requests 
+import requests
 import re
+import pycountry
 
 # Function to get geo location from the atom feed link
 def get_geo_from_pn(pn):
@@ -15,10 +16,31 @@ def get_geo_from_pn(pn):
     else:
         return pn, 'Error'  # Mark as 'Error' if no trend data
 
-# Write results to a file
-with open('found_geo_codes.txt', 'w') as f:
-    for i in range(1001):
+# Function to get country name from ISO country code
+def get_country_name(geo):
+    try:
+        country = pycountry.countries.get(alpha_2=geo)
+        if country:
+            return country.name
+    except KeyError:
+        return 'Unknown Country'
+    return 'Unknown Country'
+
+# Write results to a file and append to README.md
+with open('found_geo_codes.txt', 'w') as f, open('README.md', 'a') as readme:
+    # Write table header in README.md
+    readme.write('| pn code | country |\n')
+    readme.write('|---------|---------|\n')
+    
+    for i in range(101):
         pn = f'p{i}'
         pn, geo = get_geo_from_pn(pn)
         if geo != '' and geo != 'Error':
-            f.write(f'{pn} belongs to: {geo}\n')
+            # Get country name using pycountry
+            country_name = get_country_name(geo)
+            
+            # Write to found_geo_codes.txt
+            f.write(f'{pn} belongs to: {country_name} ({geo})\n')
+            
+            # Write to README.md in table format
+            readme.write(f'| {pn} | {country_name} |\n')
