@@ -1,0 +1,34 @@
+name: Run Geo Code Fetcher
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Her gün UTC 00:00'da çalışır
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Depoyu Klonla
+        uses: actions/checkout@v3
+
+      - name: Python'ı Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Gereksinimleri Yükle
+        run: pip install requests
+
+      - name: Scripti Çalıştır
+        run: python geo_code_fetcher.py
+
+      - name: Değişiklikleri Commit ve Push Et
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add found_geo_codes.txt
+          git commit -m "Update found_geo_codes.txt"
+          git push
