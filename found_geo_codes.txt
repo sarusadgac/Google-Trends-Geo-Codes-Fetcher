@@ -1,51 +1,51 @@
-p0 belongs to: GL
-p1 belongs to: US
-p3 belongs to: IN
-p4 belongs to: JP
-p5 belongs to: SG
-p6 belongs to: IL
-p8 belongs to: AU
-p9 belongs to: GB
-p10 belongs to: HK
-p12 belongs to: TW
-p13 belongs to: CA
-p14 belongs to: RU
-p15 belongs to: DE
-p16 belongs to: FR
-p17 belongs to: NL
-p18 belongs to: BR
-p19 belongs to: ID
-p21 belongs to: MX
-p23 belongs to: KR
-p24 belongs to: TR
-p25 belongs to: PH
-p27 belongs to: IT
-p28 belongs to: VN
-p29 belongs to: EG
-p30 belongs to: AR
-p31 belongs to: PL
-p32 belongs to: CO
-p33 belongs to: TH
-p34 belongs to: MY
-p35 belongs to: UA
-p36 belongs to: SA
-p37 belongs to: KE
-p38 belongs to: CL
-p39 belongs to: RO
-p40 belongs to: ZA
-p41 belongs to: BE
-p42 belongs to: SE
-p43 belongs to: CZ
-p44 belongs to: AT
-p45 belongs to: HU
-p46 belongs to: CH
-p47 belongs to: PT
-p48 belongs to: GR
-p49 belongs to: DK
-p50 belongs to: FI
-p51 belongs to: NO
-p52 belongs to: NG
-p53 belongs to: NZ
-p54 belongs to: IE
-p55 belongs to: PE
-p56 belongs to: ES
+p0 belongs to: Greenland (GL)
+p1 belongs to: United States (US)
+p3 belongs to: India (IN)
+p4 belongs to: Japan (JP)
+p5 belongs to: Singapore (SG)
+p6 belongs to: Israel (IL)
+p8 belongs to: Australia (AU)
+p9 belongs to: United Kingdom (GB)
+p10 belongs to: Hong Kong (HK)
+p12 belongs to: Taiwan, Province of China (TW)
+p13 belongs to: Canada (CA)
+p14 belongs to: Russian Federation (RU)
+p15 belongs to: Germany (DE)
+p16 belongs to: France (FR)
+p17 belongs to: Netherlands (NL)
+p18 belongs to: Brazil (BR)
+p19 belongs to: Indonesia (ID)
+p21 belongs to: Mexico (MX)
+p23 belongs to: Korea, Republic of (KR)
+p24 belongs to: Türkiye (TR)
+p25 belongs to: Philippines (PH)
+p27 belongs to: Italy (IT)
+p28 belongs to: Viet Nam (VN)
+p29 belongs to: Egypt (EG)
+p30 belongs to: Argentina (AR)
+p31 belongs to: Poland (PL)
+p32 belongs to: Colombia (CO)
+p33 belongs to: Thailand (TH)
+p34 belongs to: Malaysia (MY)
+p35 belongs to: Ukraine (UA)
+p36 belongs to: Saudi Arabia (SA)
+p37 belongs to: Kenya (KE)
+p38 belongs to: Chile (CL)
+p39 belongs to: Romania (RO)
+p40 belongs to: South Africa (ZA)
+p41 belongs to: Belgium (BE)
+p42 belongs to: Sweden (SE)
+p43 belongs to: Czechia (CZ)
+p44 belongs to: Austria (AT)
+p45 belongs to: Hungary (HU)
+p46 belongs to: Switzerland (CH)
+p47 belongs to: Portugal (PT)
+p48 belongs to: Greece (GR)
+p49 belongs to: Denmark (DK)
+p50 belongs to: Finland (FI)
+p51 belongs to: Norway (NO)
+p52 belongs to: Nigeria (NG)
+p53 belongs to: New Zealand (NZ)
+p54 belongs to: Ireland (IE)
+p55 belongs to: Peru (PE)
+p56 belongs to: Spain (ES)
