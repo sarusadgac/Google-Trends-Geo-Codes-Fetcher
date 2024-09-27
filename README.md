@@ -1,4 +1,11 @@
-# Google-Trends-Geo-Codes-Fetcher| pn code | country |
+
+## Google Trends Geo Code Fetcher
+
+Using Google Trends data, this tool automatically collects and updates the pn codes and their respective country names.
+
+**Last Update:** 2024-09-27 11:23:16 UTC
+
+| pn code | Country |
 |---------|---------|
 | p0 | Greenland |
 | p1 | United States |
