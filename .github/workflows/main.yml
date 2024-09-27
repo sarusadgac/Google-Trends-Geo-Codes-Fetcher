@@ -1,8 +1,9 @@
 name: Run Geo Code Fetcher
 
 on:
+  workflow_dispatch:  # Allows manual triggering from the GitHub UI
   schedule:
-    - cron: '0 0 * * *'  # Her gün UTC 00:00'da çalışır
+    - cron: '0 0 * * *'  # Runs every day at UTC 00:00
 
 permissions:
   contents: write
@@ -11,21 +12,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Depoyu Klonla
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Python'ı Kur
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Gereksinimleri Yükle
+      - name: Install Dependencies
         run: pip install requests
 
-      - name: Scripti Çalıştır
+      - name: Run Script
         run: python geo_code_fetcher.py
 
-      - name: Değişiklikleri Commit ve Push Et
+      - name: Commit and Push Changes
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
