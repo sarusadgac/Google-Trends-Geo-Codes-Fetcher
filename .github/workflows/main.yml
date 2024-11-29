@@ -3,7 +3,7 @@ name: Run Geo Code Fetcher
 on:
   workflow_dispatch:  # Allows manual triggering from the GitHub UI
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at UTC 00:00
+    - cron: '0 0 * * 2,5' #Runs at 00:00, only on Tuesday and Friday.
 
 permissions:
   contents: write
