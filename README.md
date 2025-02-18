@@ -3,7 +3,7 @@
 
 Using Google Trends data, this tool automatically collects and updates the pn codes and their respective country names.
 
-**Last Update:** 2025-02-14 00:51:22 UTC
+**Last Update:** 2025-02-18 00:51:23 UTC
 
 | pn code | Country |
 |---------|---------|
